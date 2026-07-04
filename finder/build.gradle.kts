@@ -13,6 +13,7 @@ jpackage {
     mainClass.set(application.mainClass)
     winConsole.set(true)
     docFiles.from(rootProject.file("LICENSE"), rootProject.file("README.md"))
+    devInstallDirectory.set(file("c:/tools/duplicate-finder"))
 }
 
 repositories {
