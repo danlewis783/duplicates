@@ -1,10 +1,18 @@
 plugins {
     java
     application
+    id("io.github.danlewis783.jpackage")
 }
 
 application {
     mainClass.set("acme.duplicates.DuplicateDeleter")
+}
+
+jpackage {
+    appName.set("DuplicateDeleter")
+    mainClass.set(application.mainClass)
+    winConsole.set(true)
+    docFiles.from(rootProject.file("LICENSE"), rootProject.file("README.md"))
 }
 
 repositories {
