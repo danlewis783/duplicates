@@ -1,19 +1,14 @@
 plugins {
     java
-    application
-    id("io.github.danlewis783.jpackage")
-}
-
-application {
-    mainClass.set("acme.duplicates.DuplicateDeleter")
+    id("com.example.placeholder.jpackage")
 }
 
 jpackage {
     appName.set("DuplicateDeleter")
-    mainClass.set(application.mainClass)
+    mainClass.set("acme.duplicates.DuplicateDeleter")
     winConsole.set(true)
-    docFiles.from(rootProject.file("LICENSE"), rootProject.file("README.md"))
-    devInstallDirectory.set(file("c:/tools/duplicate-deleter"))
+    docFiles.from(rootProject.file("LICENSE"), file("src/main/dist/README.md"))
+    devInstallSubdirectory.set("duplicate-deleter")
 }
 
 repositories {

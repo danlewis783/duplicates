@@ -1,19 +1,14 @@
 plugins {
     java
-    application
-    id("io.github.danlewis783.jpackage")
-}
-
-application {
-    mainClass.set("acme.duplicates.DuplicateFinder")
+    id("com.example.placeholder.jpackage")
 }
 
 jpackage {
     appName.set("DuplicateFinder")
-    mainClass.set(application.mainClass)
+    mainClass.set("acme.duplicates.DuplicateFinder")
     winConsole.set(true)
-    docFiles.from(rootProject.file("LICENSE"), rootProject.file("README.md"))
-    devInstallDirectory.set(file("c:/tools/duplicate-finder"))
+    docFiles.from(rootProject.file("LICENSE"), file("src/main/dist/README.md"))
+    devInstallSubdirectory.set("duplicate-finder")
 }
 
 repositories {

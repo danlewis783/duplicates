@@ -1,11 +1,11 @@
 pluginManagement {
     repositories {
-        mavenLocal() // for the jpackage plugin until it is live on the Plugin Portal
+        mavenLocal() // published from C:/dev/jpackage-gradle-plugin
         gradlePluginPortal()
     }
     plugins {
         // Version pinned here once for all modules.
-        id("io.github.danlewis783.jpackage") version "0.1.0"
+        id("com.example.placeholder.jpackage") version "0.1.2"
     }
 }
 
